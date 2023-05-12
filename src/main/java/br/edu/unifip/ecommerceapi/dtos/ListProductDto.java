@@ -18,6 +18,7 @@ public class ListProductDto {
     private BigDecimal price;
     private Category category;
     private boolean active;
+    private String image;
 
     public ListProductDto(Product produto) {
         this.id = produto.getId();
@@ -26,5 +27,6 @@ public class ListProductDto {
         this.price = produto.getPrice();
         this.category = produto.getCategory();
         this.active = produto.isActive();
+        this.image = produto.getImage();
     }
 }

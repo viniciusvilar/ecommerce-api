@@ -31,6 +31,9 @@ public class Product implements Serializable {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
+    @Column(nullable = true, length = 64)
+    private String image;
+
     public Product(ProductDto productDto) {
         this.name = productDto.getName();
         this.description = productDto.getDescription();
