@@ -11,8 +11,8 @@ import java.nio.file.Paths;
 public class FileDownloadUtil {
     private Path foundFile;
 
-    public Resource getFileAsResource(String fileCode) throws IOException {
-        Path dirPath = Paths.get("product-images");
+    public Resource getFileAsResource(String fileCode, String downloadDir) throws IOException {
+        Path dirPath = Paths.get(downloadDir);
         Files.list(dirPath).forEach(file -> {
             if (file.getFileName().toString().startsWith(fileCode)) {
                 foundFile = file;

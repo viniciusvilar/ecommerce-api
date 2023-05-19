@@ -137,7 +137,7 @@ public class ProductController {
 
         Resource resource = null;
         try {
-            resource = downloadUtil.getFileAsResource(fileCode);
+            resource = downloadUtil.getFileAsResource(fileCode, "product-images");
         } catch (IOException e) {
             return ResponseEntity.internalServerError().build();
         }
